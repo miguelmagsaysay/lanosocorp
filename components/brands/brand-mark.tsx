@@ -1,12 +1,11 @@
 import Image from "next/image";
 import type { SimpleIcon } from "simple-icons";
-import { siAbb, siCaterpillar } from "simple-icons/icons";
+import { siCaterpillar } from "simple-icons/icons";
 import type { BrandMarkId } from "@/types";
 import { BRAND_LOGO_SRC, BRAND_WORDMARKS } from "@/lib/brand-marks";
 import { cn } from "@/lib/utils";
 
 const simpleById: Partial<Record<BrandMarkId, SimpleIcon>> = {
-  abb: siAbb,
   caterpillar: siCaterpillar,
 };
 

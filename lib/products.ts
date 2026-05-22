@@ -2,6 +2,7 @@ import type {
   CatalogProduct,
   FeaturedProductSystem,
   ProductCategory,
+  ProductCategorySlug,
 } from "@/types";
 
 export const PRODUCT_CATEGORIES: ProductCategory[] = [

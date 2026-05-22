@@ -12,6 +12,7 @@ export const BRAND_LOGO_SRC: Partial<Record<BrandMarkId, string>> = {
 export const BRAND_WORDMARKS: Partial<
   Record<BrandMarkId, { lines: string[]; fill: string }>
 > = {
+  abb: { lines: ["ABB"], fill: "#FF000F" },
   bandg: { lines: ["B&G"], fill: "#003057" },
   furuno: { lines: ["FURUNO"], fill: "#00529B" },
   icom: { lines: ["ICOM"], fill: "#003893" },
