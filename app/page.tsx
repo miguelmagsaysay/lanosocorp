@@ -1,20 +1,11 @@
-import { HeroSection } from "@/components/sections/hero-section";
-import { HeroCompliance } from "@/components/sections/hero-compliance";
-import { ServicesGrid } from "@/components/sections/services-grid";
-import { TrustSection } from "@/components/sections/trust-section";
-import { OperationsSection } from "@/components/sections/operations-section";
-import { CtaBanner } from "@/components/sections/cta-banner";
+import { isMaintenanceMode } from "@/lib/maintenance";
+import { MaintenancePage } from "@/components/pages/maintenance-page";
+import { HomePage } from "@/components/pages/home-page";
 
-export default function HomePage() {
-  return (
-    <>
-      <HeroSection />
-      <HeroCompliance />
-      {/* <BrandStrip /> */}
-      <ServicesGrid />
-      <TrustSection />
-      <OperationsSection />
-      <CtaBanner />
-    </>
-  );
+export default function Page() {
+  if (isMaintenanceMode()) {
+    return <MaintenancePage />;
+  }
+
+  return <HomePage />;
 }
