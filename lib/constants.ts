@@ -9,8 +9,16 @@ import type { BrandItem, MarqueeBrand, NavLink, ServiceItem } from "@/types";
 
 export const SITE_URL = "https://lanosocorp.com";
 
+export const HERO_CAROUSEL_SLIDES = [
+  
+  {
+    imageSrc: "/images/hero-ship.jpg",
+    imageAlt: "Commercial vessel at sea.",
+  },
+  
+] as const;
+
 export const NAV_LINKS: NavLink[] = [
-  { href: "/", label: "Home" },
   { href: "/services", label: "Services" },
   { href: "/about", label: "About" },
   { href: "/products", label: "Products" },
@@ -61,9 +69,9 @@ export const SERVICES: ServiceItem[] = [
     description:
       "Full-scope electrical integration for new builds and retrofits, from load analysis through commissioning.",
     icon: serviceIcons.electrical,
-    imageSrc: "/images/technical-work.jpg",
+    imageSrc: "/images/services/electrical.jpg",
     imageAlt:
-      "Marine electricians working on vessel electrical systems and switchboards.",
+      "Electrical control room with wiring, equipment, and indicator panels aboard a vessel.",
     bullets: [
       "Main and emergency switchboard support, shore connection, and harmonics review",
       "Cable routing, termination quality, and insulation resistance trending",
@@ -79,9 +87,9 @@ export const SERVICES: ServiceItem[] = [
     description:
       "We unify control narratives across OEM equipment so crews see one coherent system state.",
     icon: serviceIcons.automation,
-    imageSrc: "/images/hero-ship.jpg",
+    imageSrc: "/images/services/automation.jpg",
     imageAlt:
-      "Commercial vessel at sea — bridge and automation integration context.",
+      "Ship control room with navigation and automation equipment aboard a vessel.",
     bullets: [
       "PLC/SCADA integration with marine-grade I/O and redundant paths where required",
       "Bridge automation: mode management, interlocks, and watchkeeper workflows",
@@ -97,9 +105,9 @@ export const SERVICES: ServiceItem[] = [
     description:
       "Traceable calibration workflows that stand up to audits and handover scrutiny.",
     icon: serviceIcons.instrumentation,
-    imageSrc: "/images/about-operations.jpg",
+    imageSrc: "/images/services/instrumentation.jpg",
     imageAlt:
-      "Marine technicians performing instrumentation checks aboard a vessel.",
+      "Ship monitoring panel with indicator lights and instrumentation in an engine room.",
     bullets: [
       "Pressure, temperature, level, and flow loops verified against process limits",
       "Calibration certificates with as-found/as-left data retained for surveys",
@@ -115,9 +123,9 @@ export const SERVICES: ServiceItem[] = [
     description:
       "Hands-on engine room support that keeps propulsion and auxiliaries within design margins.",
     icon: serviceIcons["engine-room"],
-    imageSrc: "/images/engine-room.jpg",
+    imageSrc: "/images/services/engine-room.jpg",
     imageAlt:
-      "Engine room machinery and propulsion systems aboard a commercial vessel.",
+      "Engine room machinery and propulsion systems aboard a container vessel.",
     bullets: [
       "Preventive maintenance scheduling aligned to OEM bulletins and running hours",
       "Major overhaul scoping, lift plans, and alignment checks",
@@ -125,6 +133,14 @@ export const SERVICES: ServiceItem[] = [
       "Sea trial support for vibration, temperature, and performance acceptance",
     ],
   },
+];
+
+export const SERVICES_HERO_CAROUSEL_SLIDES = [
+  {
+    imageSrc: "/images/services/hero.jpg",
+    imageAlt: "Technician in safety gear working on an industrial ship at sea.",
+  },
+  ...SERVICES.map(({ imageSrc, imageAlt }) => ({ imageSrc, imageAlt })),
 ];
 
 export const MARQUEE_BRANDS: MarqueeBrand[] = [

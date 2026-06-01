@@ -2,7 +2,7 @@ import { Check } from "lucide-react";
 
 const COMPLIANCE_ITEMS = [
   { title: "IMO Aligned", subtitle: "International Maritime Org." },
-  { title: "SOLAS Certified", subtitle: "Safety of Life at Sea" },
+  { title: "SOLAS Aligned", subtitle: "Safety of Life at Sea" },
   { title: "MARINA Compliant", subtitle: "Maritime Industry Authority" },
 ] as const;
 

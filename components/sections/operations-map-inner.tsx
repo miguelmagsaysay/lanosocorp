@@ -62,7 +62,7 @@ export default function OperationsMapInner() {
             title={`${loc.title} — ${loc.subtitle}`}
           >
             <Popup>
-              <p className="font-display text-sm font-bold text-navy">
+              <p className="text-sm font-medium text-navy">
                 {loc.title}
               </p>
               <p className="text-xs text-navy/70">{loc.subtitle}</p>

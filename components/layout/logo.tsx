@@ -12,7 +12,11 @@ type LogoProps = {
 
 const LOGO_SRC = "/images/lanoso-logo.png";
 
-export function Logo({ className, priority = false }: LogoProps) {
+export function Logo({
+  className,
+  inverted = false,
+  priority = false,
+}: LogoProps) {
   return (
     <Link
       href="/"
@@ -28,7 +32,10 @@ export function Logo({ className, priority = false }: LogoProps) {
         alt=""
         fill
         priority={priority}
-        className="object-contain object-left"
+        className={cn(
+          "object-contain object-left",
+          inverted && "brightness-0 invert",
+        )}
         sizes="(max-width: 768px) 118px, 148px"
       />
     </Link>

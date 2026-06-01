@@ -85,7 +85,7 @@ export function ContactForm() {
         className="rounded-xl border border-orange/30 bg-orange/5 p-8 text-center"
         role="status"
       >
-        <p className="font-display text-lg font-bold uppercase text-navy">
+        <p className="text-lg font-medium text-navy">
           Message received
         </p>
         <p className="mt-2 text-sm text-navy/70">

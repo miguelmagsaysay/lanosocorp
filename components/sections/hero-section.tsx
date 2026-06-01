@@ -1,80 +1,73 @@
 "use client";
 
-import Image from "next/image";
-import { Plus_Jakarta_Sans } from "next/font/google";
+import { useRef, useState } from "react";
 import { motion } from "framer-motion";
 import { ButtonLink } from "@/components/ui/button-link";
-
-const heroTitle = Plus_Jakarta_Sans({
-  subsets: ["latin"],
-  weight: ["500", "700"],
-  display: "swap",
-});
+import { HeroBackgroundCarousel } from "./hero-background-carousel";
+import { HeroStatsStrip } from "./hero-stats-strip";
 
 export function HeroSection() {
+  const [slideIndex, setSlideIndex] = useState(0);
+  const sectionRef = useRef<HTMLElement>(null);
+
   return (
-    <section className="relative flex min-h-[75svh] items-center justify-center overflow-hidden pt-16">
-      <Image
-        src="/images/hero-ship.jpg"
-        alt="Cargo ship loaded with containers at port — marine logistics imagery."
-        fill
-        priority
-        className="object-cover object-center"
-        sizes="100vw"
+    <section
+      ref={sectionRef}
+      className="relative flex min-h-[100svh] flex-col overflow-hidden pt-16"
+    >
+      <HeroBackgroundCarousel
+        activeIndex={slideIndex}
+        onIndexChange={setSlideIndex}
+        sectionRef={sectionRef}
       />
-      {/* Soft scrim so centered copy stays readable on the photo */}
-      <motion.div
-        className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_85%_75%_at_50%_45%,rgba(251,251,253,0.94)_0%,rgba(251,251,253,0.82)_42%,rgba(251,251,253,0.45)_72%,rgba(251,251,253,0.2)_100%)]"
+
+      <div
+        className="pointer-events-none absolute inset-0 z-[1] bg-gradient-to-b from-black/55 via-black/35 to-black/55"
         aria-hidden
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.6 }}
       />
 
-      <div className="relative z-10 mx-auto flex max-w-4xl flex-col items-center px-5 py-20 text-center sm:px-8 sm:py-24">
-        <motion.p
-          initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.45 }}
-          className="text-[11px] font-medium uppercase tracking-[0.22em] text-[#6e6e73] sm:text-xs"
-        >
-          Marine Systems Integration
-        </motion.p>
+      <div
+        className="pointer-events-none absolute inset-x-0 bottom-0 z-[2] h-56 bg-gradient-to-t from-black/85 via-black/40 to-transparent sm:h-64"
+        aria-hidden
+      />
 
-        <motion.h1
-          initial={{ opacity: 0, y: 14 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.05 }}
-          className={`${heroTitle.className} mt-4 text-[2rem] font-bold leading-[1.12] tracking-[-0.02em] sm:text-5xl md:text-[3.25rem]`}
-        >
-          <span className="text-navy-dark">Smart Solutions</span>{" "}
-          <span className="font-medium text-navy/45">for</span>{" "}
-          <span className="text-orange">Smarter Seas</span>
-        </motion.h1>
-
-        
-
-        <motion.div
-          initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.45, delay: 0.16 }}
-          className="mt-9 flex flex-wrap items-center justify-center gap-3"
-        >
-          <ButtonLink
-            href="/services"
-            variant="primary"
-            className="min-w-[9.5rem] rounded-full px-6 shadow-none"
+      <div className="relative z-10 flex min-h-0 flex-1 flex-col">
+        <div className="flex flex-1 flex-col items-center justify-center px-5 pb-8 text-center sm:px-8 sm:pb-10">
+          <motion.p
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.45 }}
+            className="text-xs font-normal tracking-wide text-white/85 sm:text-sm"
           >
-            Our Services
-          </ButtonLink>
-          <ButtonLink
-            href="/contact"
-            variant="outline"
-            className="min-w-[9.5rem] rounded-full border-[#1d1d1f]/20 bg-white/60 px-6 text-[#1d1d1f] shadow-none backdrop-blur-sm hover:bg-white/90"
+            Marine Systems Integration
+          </motion.p>
+
+          <motion.h1
+            initial={{ opacity: 0, y: 14 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.05 }}
+            className="text-balance mt-4 max-w-3xl text-[2.05rem] font-light leading-[1.06] tracking-tight text-white sm:text-[3rem] md:text-[3.5rem]"
           >
-            Contact Us
-          </ButtonLink>
-        </motion.div>
+            Smart Solutions for Smarter Seas
+          </motion.h1>
+
+          <motion.div
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.45, delay: 0.1 }}
+            className="mt-8"
+          >
+            <ButtonLink
+              href="/services"
+              variant="primary"
+              className="min-w-[10rem] rounded-full bg-white px-6 text-black !transition-none hover:bg-white focus-visible:ring-white/60"
+            >
+              Our Services
+            </ButtonLink>
+          </motion.div>
+        </div>
+
+        <HeroStatsStrip />
       </div>
     </section>
   );

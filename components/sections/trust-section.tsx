@@ -6,21 +6,21 @@ import { MotionSection } from "./motion-section";
 const pillars = [
   {
     title: "IMO, SOLAS & MARINA Aligned",
-    body: "Every solution is engineered to meet international maritime standards.",
+    body: "Documentation, testing, and integration workflows built for class, PSC, and owner technical review.",
     icon: Award,
     imageSrc: "/images/hero-ship.jpg",
     imageAlt: "Commercial vessel at sea — representative of class, SOLAS, and MARINA compliance.",
   },
   {
     title: "Field-Proven",
-    body: "Over a decade of hands-on experience on vessels across the region.",
+    body: "Over a decade mobilizing on commercial and offshore vessels across the Philippines.",
     icon: Wrench,
     imageSrc: "/images/technical-work.jpg",
     imageAlt: "Marine technicians performing systems work aboard a vessel.",
   },
   {
-    title: "End-to-End Support",
-    body: "From diagnosis to deployment, we handle it all.",
+    title: "Nationwide Reach",
+    body: "Metro Manila head office with teams across Visayas, Mindanao, and key port hubs.",
     icon: Globe2,
     imageSrc: "/images/engine-room.jpg",
     imageAlt: "Engine room and machinery aboard a commercial ship.",
@@ -62,7 +62,7 @@ export function TrustSection() {
                     </span>
                   </div>
                   <div className="flex flex-1 flex-col p-6 sm:p-7">
-                    <h3 className="font-display text-lg font-bold uppercase tracking-wide text-navy">
+                    <h3 className="text-lg font-medium text-navy">
                       {p.title}
                     </h3>
                     <p className="mt-3 flex-1 text-sm leading-relaxed text-navy/70">

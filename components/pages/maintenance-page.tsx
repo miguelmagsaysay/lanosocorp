@@ -32,10 +32,10 @@ export function MaintenancePage() {
           />
         </div>
 
-        <p className="mt-10 font-display text-xs font-bold uppercase tracking-[0.25em] text-orange">
+        <p className="mt-10 text-xs font-medium tracking-wide text-orange">
           Site update in progress
         </p>
-        <h1 className="mt-4 font-display text-3xl font-bold uppercase tracking-tight text-white sm:text-4xl">
+        <h1 className="mt-4 text-3xl font-light tracking-tight text-white sm:text-4xl">
           Under Maintenance
         </h1>
         <p className="mt-5 text-base leading-relaxed text-white/75 sm:text-lg">
@@ -45,7 +45,7 @@ export function MaintenancePage() {
 
         <div className="mt-10 flex items-center gap-2 text-white/50">
           <Anchor className="h-4 w-4 shrink-0 text-orange" aria-hidden />
-          <span className="text-xs font-semibold uppercase tracking-widest">
+          <span className="text-xs font-semibold tracking-normal">
             Smart Solutions for Smarter Seas
           </span>
         </div>

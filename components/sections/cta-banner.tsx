@@ -32,7 +32,7 @@ export function CtaBanner() {
             className="relative flex flex-col gap-10 px-6 py-12 sm:px-10 sm:py-14 lg:flex-row lg:items-center lg:justify-between lg:gap-12"
           >
             <motion.div className="max-w-2xl text-center lg:text-left">
-              <h2 className="font-display text-[1.65rem] font-semibold leading-[1.12] tracking-tight text-[#1d1d1f] sm:text-3xl lg:text-[2rem]">
+              <h2 className="text-[1.65rem] font-light leading-[1.12] tracking-tight text-[#1d1d1f] sm:text-3xl lg:text-[2rem]">
                 Ready to upgrade your vessel&apos;s{" "}
                 <span className="text-navy">systems?</span>
               </h2>
@@ -54,7 +54,7 @@ export function CtaBanner() {
                 variant="primary"
                 className="group min-w-[14rem] rounded-full px-7 py-3 text-[15px] shadow-lg shadow-orange/20"
               >
-                Talk to an expert
+                Contact Us
                 <ArrowRight
                   className="h-4 w-4 transition-transform group-hover:translate-x-0.5"
                   aria-hidden

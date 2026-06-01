@@ -42,15 +42,12 @@ export function ProductCard({ product, className }: ProductCardProps) {
         />
       </div>
       <div className="flex flex-1 flex-col p-4 sm:p-5">
-        <p className="text-[10px] font-bold uppercase tracking-widest text-orange">
+        <p className="text-[10px] font-medium tracking-normal text-orange">
           {categoryLabel}
         </p>
-        <h3 className="mt-2 font-display text-sm font-bold uppercase leading-snug text-navy sm:text-base">
+        <h3 className="mt-2 text-sm font-medium leading-snug text-navy sm:text-base">
           {product.title}
         </h3>
-        {product.manufacturer ? (
-          <p className="mt-2 text-xs text-navy/55">{product.manufacturer}</p>
-        ) : null}
         {product.description ? (
           <p className="mt-2 flex-1 text-xs leading-relaxed text-navy/65">
             {product.description}

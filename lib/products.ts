@@ -24,7 +24,7 @@ export const FEATURED_PRODUCT_SYSTEMS: FeaturedProductSystem[] = [
     title: "Fire Detection and Alarm System",
     description:
       "Controllers, detectors, manual call points, and audio-visual sirens for class-compliant vessel fire safety.",
-    imageSrc: "/images/products/product-36.png",
+    imageSrc: "/images/products/banners/fdas.png",
     imageAlt:
       "Lanoso Corporation fire detection and alarm system product lineup.",
   },
@@ -34,7 +34,7 @@ export const FEATURED_PRODUCT_SYSTEMS: FeaturedProductSystem[] = [
     title: "Marine Automatic Telephone System",
     description:
       "Exchange units, rugged wall stations, desk phones, and high-noise headsets for shipboard communications.",
-    imageSrc: "/images/products/product-46.png",
+    imageSrc: "/images/products/banners/mats.png",
     imageAlt:
       "Lanoso Corporation marine automatic telephone system components.",
   },
@@ -44,7 +44,7 @@ export const FEATURED_PRODUCT_SYSTEMS: FeaturedProductSystem[] = [
     title: "Public Address System",
     description:
       "Main units, remote stations, amplifiers, and zone paging for bridge, deck, engine room, and accommodation.",
-    imageSrc: "/images/products/product-25.png",
+    imageSrc: "/images/products/banners/pas.png",
     imageAlt: "Lanoso Corporation public address system equipment.",
   },
   {
@@ -53,7 +53,7 @@ export const FEATURED_PRODUCT_SYSTEMS: FeaturedProductSystem[] = [
     title: "General Alarm System",
     description:
       "Emergency alarm controllers, visual signals, and manual call points for vessel-wide alerting.",
-    imageSrc: "/images/products/product-14.png",
+    imageSrc: "/images/products/banners/gas.png",
     imageAlt: "Lanoso Corporation general alarm system hardware.",
   },
   {
@@ -66,6 +66,11 @@ export const FEATURED_PRODUCT_SYSTEMS: FeaturedProductSystem[] = [
     imageAlt: "Lanoso Corporation battery-less marine telephone system.",
   },
 ];
+
+/** FDAS, MATS, PAS, GAS — shown on the products page integrated-systems carousel. */
+export const PRODUCTS_PAGE_FEATURED_SYSTEMS = FEATURED_PRODUCT_SYSTEMS.filter(
+  (s) => ["fdas", "mats", "pas", "gas"].includes(s.id),
+);
 
 const img = (n: number) => `/images/products/product-${String(n).padStart(2, "0")}.png`;
 

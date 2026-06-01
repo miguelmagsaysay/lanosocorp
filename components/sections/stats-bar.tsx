@@ -2,46 +2,8 @@
 
 import { useEffect, useRef, useState } from "react";
 import { useInView } from "framer-motion";
+import { HOME_STATS, type HomeStat } from "@/lib/home-stats";
 import { MotionSection } from "./motion-section";
-
-type Stat = {
-  id: string;
-  type: "number" | "text";
-  label: string;
-  value?: number;
-  prefix?: string;
-  suffix?: string;
-  display?: string;
-};
-
-const STATS: Stat[] = [
-  {
-    id: "years",
-    type: "number",
-    label: "Years Experience",
-    value: 10,
-    suffix: "+",
-  },
-  {
-    id: "projects",
-    type: "number",
-    label: "Projects Completed",
-    value: 500,
-    suffix: "+",
-  },
-  {
-    id: "imo",
-    type: "text",
-    label: "Compliance",
-    display: "IMO · SOLAS · MARINA",
-  },
-  {
-    id: "support",
-    type: "text",
-    label: "Operations",
-    display: "24/7 Support",
-  },
-];
 
 function useAnimatedNumber(target: number, active: boolean, duration = 1600) {
   const [n, setN] = useState(0);
@@ -63,25 +25,55 @@ function useAnimatedNumber(target: number, active: boolean, duration = 1600) {
   return n;
 }
 
-function StatCell({ stat, active }: { stat: Stat; active: boolean }) {
-  const years = useAnimatedNumber(stat.value ?? 0, active && stat.type === "number");
+function StatCell({ stat, active }: { stat: HomeStat; active: boolean }) {
+  const count = useAnimatedNumber(
+    stat.value ?? 0,
+    active && stat.variant === "metric",
+  );
 
   return (
     <div className="flex flex-col py-6 text-center md:py-8">
-      <p className="font-display text-3xl font-bold text-white sm:text-4xl">
-        {stat.type === "number" ? (
-          <>
+      {stat.variant === "metric" ? (
+        <>
+          <p className="text-3xl font-light tabular-nums text-white sm:text-4xl">
             {stat.prefix}
-            {years}
+            {count}
             {stat.suffix}
-          </>
-        ) : (
-          <span className="text-orange">{stat.display}</span>
-        )}
-      </p>
-      <p className="mt-2 text-xs font-medium uppercase tracking-widest text-white/60">
-        {stat.label}
-      </p>
+          </p>
+          <p className="mt-2 text-xs font-medium tracking-normal text-white/60">
+            {stat.label}
+          </p>
+        </>
+      ) : null}
+
+      {stat.variant === "text" ? (
+        <>
+          <p className="text-base font-normal leading-snug tracking-normal text-white sm:text-lg">
+            {stat.display}
+          </p>
+          <p className="mt-2 text-xs font-medium tracking-normal text-white/60">
+            {stat.label}
+          </p>
+        </>
+      ) : null}
+
+      {stat.variant === "badges" ? (
+        <>
+          <div className="flex flex-wrap items-center justify-center gap-1.5">
+            {stat.badges?.map((badge) => (
+              <span
+                key={badge}
+                className="rounded-full border border-white/20 bg-white/10 px-2.5 py-1 text-xs font-medium text-white/90"
+              >
+                {badge}
+              </span>
+            ))}
+          </div>
+          <p className="mt-2 text-xs font-medium tracking-normal text-white/60">
+            {stat.label}
+          </p>
+        </>
+      ) : null}
     </div>
   );
 }
@@ -96,7 +88,7 @@ export function StatsBar() {
         ref={ref}
         className="mx-auto grid max-w-6xl grid-cols-2 divide-x divide-white/10 md:grid-cols-4"
       >
-        {STATS.map((stat) => (
+        {HOME_STATS.map((stat) => (
           <StatCell key={stat.id} stat={stat} active={inView} />
         ))}
       </div>

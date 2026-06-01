@@ -20,6 +20,7 @@ const securityHeaders = [
       "style-src-attr 'unsafe-inline'",
       "font-src 'self' https://fonts.gstatic.com",
       "img-src 'self' data: https:",
+      "media-src 'self' https:",
       "frame-src 'self' https://www.google.com https://maps.google.com https://consent.google.com https://www.gstatic.com",
       "connect-src 'self' https://www.google-analytics.com https://region1.google-analytics.com https://www.googletagmanager.com https://*.tile.openstreetmap.org",
     ].join("; "),

@@ -12,7 +12,7 @@ export function FlankedHeading({
   className,
 }: FlankedHeadingProps) {
   const titleClass =
-    "font-display text-center text-xl font-bold uppercase tracking-tight text-navy sm:text-2xl md:text-3xl";
+    "text-center text-xl font-light tracking-tight text-navy sm:text-2xl md:text-3xl";
 
   const title =
     as === "h3" ? (

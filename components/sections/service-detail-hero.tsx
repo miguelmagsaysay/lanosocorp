@@ -40,7 +40,7 @@ export function ServiceDetailHero({
         <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border-2 border-white/40 bg-white/10 backdrop-blur-sm">
           <Icon className="h-6 w-6 text-orange" aria-hidden />
         </span>
-        <h2 className="font-display text-2xl font-bold uppercase tracking-tight text-white sm:text-3xl">
+        <h2 className="text-2xl font-light tracking-tight text-white sm:text-3xl">
           {title}
         </h2>
       </div>

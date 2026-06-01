@@ -1,22 +1,15 @@
 import type { Metadata } from "next";
-import { Barlow_Condensed, DM_Sans } from "next/font/google";
+import { Inter } from "next/font/google";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import { SiteShell } from "@/components/layout/site-shell";
 import { organizationJsonLd } from "@/lib/json-ld";
 import { isMaintenanceMode } from "@/lib/maintenance";
 import "./globals.css";
 
-const display = Barlow_Condensed({
+const inter = Inter({
   subsets: ["latin"],
-  weight: ["700"],
-  variable: "--font-display",
-  display: "swap",
-});
-
-const body = DM_Sans({
-  subsets: ["latin"],
-  weight: ["400", "500"],
-  variable: "--font-body",
+  weight: ["300", "400", "500", "600"],
+  variable: "--font-sans",
   display: "swap",
 });
 
@@ -65,7 +58,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <body
-        className={`${display.variable} ${body.variable} min-h-screen bg-white font-body antialiased`}
+        className={`${inter.variable} min-h-screen bg-white font-body antialiased`}
       >
         {/* JSON-LD: static LocalBusiness schema (sanitized at build time). */}
         <script

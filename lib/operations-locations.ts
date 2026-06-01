@@ -51,6 +51,13 @@ export const OPERATION_LOCATIONS: OperationLocation[] = [
     lng: 124.6319,
   },
   {
+    id: "davao",
+    title: "Davao City",
+    subtitle: "Davao Region",
+    lat: 7.1907,
+    lng: 125.4553,
+  },
+  {
     id: "gensan",
     title: "General Santos",
     subtitle: "Southern Mindanao",

@@ -1,30 +1,27 @@
 import Link from "next/link";
 import { SectionHeader } from "@/components/ui/section-header";
 import { MotionSection } from "./motion-section";
-import { ServicesCarousel } from "./services-carousel";
+import { ServicesBento } from "./services-bento";
 
 export function ServicesGrid() {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-b from-white via-stone-50/40 to-white py-20 sm:py-24">
-      <div
-        className="pointer-events-none absolute inset-0 maritime-waves opacity-25"
-        aria-hidden
-      />
-      <div className="relative z-10 mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+    <section className="bg-white py-16 sm:py-20">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <MotionSection>
           <SectionHeader
             eyebrow="Capabilities"
             title="What We Do"
             description="Electrical, automation, instrumentation, and machinery support engineered for class, PSC, and owner expectations."
+            className="mb-10 sm:mb-12"
           />
         </MotionSection>
 
-        <MotionSection className="mt-12">
-          <ServicesCarousel />
-          <p className="mt-8 text-center">
+        <MotionSection>
+          <ServicesBento />
+          <p className="mt-10 text-center">
             <Link
               href="/services"
-              className="text-sm font-semibold uppercase tracking-wide text-orange transition hover:text-orange-light"
+              className="text-sm font-medium text-navy/55 transition hover:text-navy"
             >
               View all services →
             </Link>

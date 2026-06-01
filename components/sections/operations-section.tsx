@@ -12,7 +12,7 @@ import { OperationsMap } from "./operations-map";
 const regions = [
   {
     title: "Metro Manila",
-    subtitle: "Head Office",
+    subtitle: "Navotas City",
     icon: Building2,
   },
   {
@@ -22,12 +22,17 @@ const regions = [
   },
   {
     title: "Region VII",
-    subtitle: "Central Visayas",
+    subtitle: "Tayod, Consolacion, Cebu",
     icon: Landmark,
   },
   {
     title: "Region VIII",
     subtitle: "Eastern Visayas",
+    icon: Landmark,
+  },
+  {
+    title: "Region XI",
+    subtitle: "Davao Region",
     icon: Landmark,
   },
 ] as const;
@@ -36,6 +41,7 @@ const mindanao = [
   { city: "Zamboanga", region: "Western Mindanao" },
   { city: "Cagayan de Oro", region: "Northern Mindanao" },
   { city: "General Santos", region: "Southern Mindanao" },
+  { city: "Davao City", region: "Davao Region" },
 ] as const;
 
 function IconRing({ children }: { children: React.ReactNode }) {
@@ -58,7 +64,7 @@ export function OperationsSection() {
       <div className="relative z-10 mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <div className="grid gap-14 lg:grid-cols-2 lg:gap-16 lg:items-start">
           <MotionSection>
-            <h2 className="font-display text-3xl font-bold uppercase tracking-tight text-navy sm:text-4xl">
+            <h2 className="text-3xl font-light tracking-tight text-navy sm:text-4xl">
               Our Operations
             </h2>
             <div className="mt-3 h-1 w-14 bg-orange" aria-hidden />
@@ -75,7 +81,7 @@ export function OperationsSection() {
                       <Icon className="h-5 w-5" strokeWidth={1.75} aria-hidden />
                     </IconRing>
                     <div>
-                      <p className="font-display text-sm font-bold uppercase tracking-wide text-navy">
+                      <p className="text-sm font-medium text-navy">
                         {r.title}
                       </p>
                       <p className="mt-0.5 text-sm font-bold text-orange">
@@ -93,7 +99,7 @@ export function OperationsSection() {
                   <Palmtree className="h-5 w-5" strokeWidth={1.75} aria-hidden />
                 </IconRing>
                 <div>
-                  <p className="font-display text-sm font-bold uppercase tracking-wide text-navy">
+                  <p className="text-sm font-medium text-navy">
                     Areas of Mindanao
                   </p>
                   <ul className="mt-4 space-y-3">

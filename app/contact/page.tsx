@@ -46,7 +46,7 @@ export default function ContactPage() {
       />
       <div className="mx-auto grid max-w-6xl gap-12 px-4 py-16 lg:grid-cols-2 lg:px-8">
         <div>
-          <h2 className="font-display text-sm font-bold uppercase tracking-[0.2em] text-orange">
+          <h2 className="text-sm font-medium tracking-wide text-orange">
             Direct Lines
           </h2>
           <ul className="mt-6 space-y-4 text-sm text-navy/80">
@@ -126,7 +126,7 @@ export default function ContactPage() {
         </div>
 
         <div>
-          <h2 className="font-display text-sm font-bold uppercase tracking-[0.2em] text-orange">
+          <h2 className="text-sm font-medium tracking-wide text-orange">
             Inquiry Form
           </h2>
           <p className="mt-2 text-sm text-navy/70">

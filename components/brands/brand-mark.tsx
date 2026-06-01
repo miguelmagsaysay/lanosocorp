@@ -136,7 +136,7 @@ function WordmarkMark({
           textAnchor="middle"
           fill={wm.fill}
           fontSize={fs}
-          fontFamily="var(--font-display), system-ui, sans-serif"
+          fontFamily="var(--font-sans), system-ui, sans-serif"
           fontWeight="700"
           letterSpacing="0.04em"
         >

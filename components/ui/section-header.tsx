@@ -29,7 +29,7 @@ export function SectionHeader({
     >
       <p
         className={cn(
-          "font-display text-sm font-bold uppercase tracking-[0.2em]",
+          "text-sm font-medium tracking-wide",
           light ? "text-orange" : "text-orange",
         )}
       >
@@ -37,7 +37,7 @@ export function SectionHeader({
       </p>
       <h2
         className={cn(
-          "mt-3 font-display text-3xl font-bold uppercase tracking-tight sm:text-4xl",
+          "mt-3 text-3xl font-light tracking-tight sm:text-4xl",
           light ? "text-white" : "text-navy",
         )}
       >
@@ -46,7 +46,7 @@ export function SectionHeader({
       {description ? (
         <p
           className={cn(
-            "mt-4 text-base leading-relaxed sm:text-lg",
+            "mt-4 text-base font-normal leading-relaxed sm:text-lg",
             light ? "text-white/75" : "text-navy/70",
           )}
         >

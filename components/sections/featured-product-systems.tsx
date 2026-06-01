@@ -33,10 +33,10 @@ export function FeaturedProductSystems() {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-navy-dark/85 via-navy/25 to-transparent" />
               <div className="absolute bottom-0 left-0 right-0 p-5 sm:p-6">
-                <p className="font-display text-2xl font-bold tracking-tight text-white sm:text-3xl">
+                <p className="text-2xl font-light tracking-tight text-white sm:text-3xl">
                   {system.acronym}
                 </p>
-                <h3 className="mt-1 font-display text-sm font-bold uppercase tracking-wide text-orange sm:text-base">
+                <h3 className="mt-1 text-sm font-medium text-orange sm:text-base">
                   {system.title}
                 </h3>
                 <p className="mt-2 max-w-xl text-sm leading-relaxed text-white/80">

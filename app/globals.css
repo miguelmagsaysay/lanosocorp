@@ -7,10 +7,24 @@
   --foreground: #1b2b5e;
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: var(--font-body), system-ui, sans-serif;
+@layer base {
+  body {
+    color: var(--foreground);
+    background: var(--background);
+    font-family: var(--font-sans), system-ui, sans-serif;
+    font-weight: 400;
+    letter-spacing: -0.011em;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-weight: 300;
+    letter-spacing: -0.02em;
+  }
 }
 
 @layer utilities {
@@ -22,7 +36,7 @@ body {
     height: 100%;
     width: 100%;
     z-index: 0;
-    font-family: var(--font-body), system-ui, sans-serif;
+    font-family: var(--font-sans), system-ui, sans-serif;
   }
 
   .operations-map .leaflet-popup-content-wrapper {
