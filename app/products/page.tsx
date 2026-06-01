@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Suspense } from "react";
 import { FeaturedProductSystemsCarousel } from "@/components/sections/featured-product-systems-carousel";
 import { ProductCatalog } from "@/components/sections/product-catalog";
 import { MotionSection } from "@/components/sections/motion-section";
@@ -16,6 +17,17 @@ export const metadata: Metadata = {
     url: "https://lanosocorp.com/products",
   },
 };
+
+function CatalogFallback() {
+  return (
+    <div
+      className="animate-pulse rounded-xl border border-navy/10 bg-stone-50/80 p-8 text-sm text-navy/50"
+      aria-hidden
+    >
+      Loading catalog…
+    </div>
+  );
+}
 
 export default function ProductsPage() {
   return (
@@ -39,7 +51,9 @@ export default function ProductsPage() {
             align="left"
             className="mb-10 max-w-none text-left"
           />
-          <ProductCatalog />
+          <Suspense fallback={<CatalogFallback />}>
+            <ProductCatalog />
+          </Suspense>
         </MotionSection>
 
         <MotionSection className="mt-20">
