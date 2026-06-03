@@ -28,6 +28,7 @@ function serviceLabel(service: ContactFormInput["service"]): string {
     automation: "Automation Systems",
     instrumentation: "Instrumentation & Calibration",
     "engine-room": "Engine Room Machinery Support",
+    "marine-machinery": "Marine Machinery Solutions",
     general: "General Inquiry",
   };
   return map[service];

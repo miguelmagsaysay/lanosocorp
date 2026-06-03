@@ -10,6 +10,7 @@ export type ServiceSlug =
   | "automation"
   | "instrumentation"
   | "engine-room"
+  | "marine-machinery"
   | "general";
 
 export type ServiceItem = {

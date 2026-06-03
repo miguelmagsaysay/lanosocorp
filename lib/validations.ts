@@ -17,7 +17,14 @@ export const contactFormSchema = z.object({
     .max(254, "Email is too long"),
   phone: trimmedString("Phone", 40),
   service: z.enum(
-    ["electrical", "automation", "instrumentation", "engine-room", "general"],
+    [
+      "electrical",
+      "automation",
+      "instrumentation",
+      "engine-room",
+      "marine-machinery",
+      "general",
+    ],
     { message: "Select a service category" },
   ),
   message: trimmedString("Message", 4000),

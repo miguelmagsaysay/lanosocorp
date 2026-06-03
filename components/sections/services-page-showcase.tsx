@@ -17,6 +17,7 @@ const NAV_LABELS: Record<ServiceItem["slug"], string> = {
   automation: "Automation",
   instrumentation: "Instrumentation",
   "engine-room": "Engine Room",
+  "marine-machinery": "Machinery",
   general: "General",
 };
 

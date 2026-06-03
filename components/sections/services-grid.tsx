@@ -11,7 +11,7 @@ export function ServicesGrid() {
           <SectionHeader
             eyebrow="Capabilities"
             title="What We Do"
-            description="Electrical, automation, instrumentation, and machinery support engineered for class, PSC, and owner expectations."
+            description="Electrical, automation, instrumentation, engine room, and marine machinery support engineered for class, PSC, and owner expectations."
             className="mb-10 sm:mb-12"
           />
         </MotionSection>

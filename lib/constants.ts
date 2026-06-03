@@ -1,5 +1,6 @@
 import {
   Anchor,
+  Cog,
   Cpu,
   Gauge,
   Zap,
@@ -30,6 +31,7 @@ export const FOOTER_SERVICES = [
   "Automation Systems",
   "Instrumentation & Calibration",
   "Engine Room Machinery Support",
+  "Marine Machinery Solutions",
 ];
 
 export const CONTACT_EMAIL = "info@lanosocorp.com";
@@ -58,6 +60,7 @@ const serviceIcons: Record<string, LucideIcon> = {
   automation: Cpu,
   instrumentation: Gauge,
   "engine-room": Anchor,
+  "marine-machinery": Cog,
 };
 
 export const SERVICES: ServiceItem[] = [
@@ -131,6 +134,24 @@ export const SERVICES: ServiceItem[] = [
       "Major overhaul scoping, lift plans, and alignment checks",
       "Spare parts criticality analysis and logistics for remote mobilizations",
       "Sea trial support for vibration, temperature, and performance acceptance",
+    ],
+  },
+  {
+    slug: "marine-machinery",
+    title: "Marine Machinery Solutions",
+    shortDescription:
+      "Propulsion and auxiliary machinery support, troubleshooting, and OEM coordination for reliable plant operation.",
+    description:
+      "Integrated machinery services that keep main and auxiliary systems within OEM limits and class expectations.",
+    icon: serviceIcons["marine-machinery"],
+    imageSrc: "/images/services/ship-machinery.jpg",
+    imageAlt:
+      "Marine machinery and propulsion equipment in a vessel engine room.",
+    bullets: [
+      "Main and auxiliary machinery diagnostics and performance optimization",
+      "Pump, compressor, and steering gear system troubleshooting and repair planning",
+      "Alignment, vibration, and load testing coordination for acceptance runs",
+      "OEM liaison for parts availability, warranties, and technical bulletins",
     ],
   },
 ];

@@ -3,14 +3,18 @@ import { ServiceShowcaseCard } from "./service-showcase-card";
 
 export function ServicesBento() {
   return (
-    <div className="grid w-full grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-5">
+    <div className="flex w-full flex-wrap justify-center gap-4 sm:gap-5">
       {SERVICES.map((service) => (
-        <ServiceShowcaseCard
+        <div
           key={service.slug}
-          service={service}
-          variant="minimal"
-          layout="wide"
-        />
+          className="w-full sm:w-[calc(50%-0.625rem)]"
+        >
+          <ServiceShowcaseCard
+            service={service}
+            variant="minimal"
+            layout="wide"
+          />
+        </div>
       ))}
     </div>
   );
