@@ -10,6 +10,9 @@ import type { BrandItem, MarqueeBrand, NavLink, ServiceItem } from "@/types";
 
 export const SITE_URL = "https://lanosocorp.com";
 
+export const HERO_SUBHEADING =
+  "Marine Solutions Aligned with IMO, SOLAS and MARINA Regulatory Requirements";
+
 export const HERO_CAROUSEL_SLIDES = [
   
   {
@@ -42,6 +45,9 @@ export const PHONE_PRESIDENT = "0915 764 8514";
 export const PHONE_GLOBE_E164 = "639455496162";
 export const ADDRESS_LINE =
   "Blk31 Lot18 P2 A2 BRGY Dagat-dagatan, NBBS Navotas City 1409 Philippines";
+
+export const REGULATORY_DISCLAIMER =
+  "LANOSO Corporation designs and implements marine solutions in alignment with applicable IMO, SOLAS, and MARINA regulatory requirements. Final compliance status is subject to vessel-specific conditions, project scope, classification society requirements, flag-state regulations, inspections, approvals, certifications, and applicable governmental or regulatory determinations.";
 
 /** Google Maps → Share → “Embed a map” iframe `src` (optional; improves pin accuracy). */
 export function getGoogleMapsEmbedSrc(): string {

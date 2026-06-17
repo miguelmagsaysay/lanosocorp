@@ -6,6 +6,7 @@ import {
   NAV_LINKS,
   PHONE_GLOBE,
   PHONE_SMART,
+  REGULATORY_DISCLAIMER,
 } from "@/lib/constants";
 import { Logo } from "./logo";
 
@@ -96,7 +97,12 @@ export function Footer() {
           </div>
         </div>
 
-        <ul className="mt-12 flex flex-col gap-4 border-t border-white/10 pt-10 sm:flex-row sm:flex-wrap sm:items-center sm:justify-between">
+        <p className="mt-12 border-t border-white/10 pt-10 text-xs leading-relaxed text-white/45">
+          <span className="font-medium text-white/55">Disclaimer:</span>{" "}
+          {REGULATORY_DISCLAIMER}
+        </p>
+
+        <ul className="mt-6 flex flex-col gap-4 sm:flex-row sm:flex-wrap sm:items-center sm:justify-between">
           <li className="text-xs text-white/55">
             © {new Date().getFullYear()} Lanoso Corporation. All rights reserved.
           </li>

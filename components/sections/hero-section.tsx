@@ -3,6 +3,7 @@
 import { useRef, useState } from "react";
 import { motion } from "framer-motion";
 import { ButtonLink } from "@/components/ui/button-link";
+import { HERO_SUBHEADING } from "@/lib/constants";
 import { HeroBackgroundCarousel } from "./hero-background-carousel";
 import { HeroStatsStrip } from "./hero-stats-strip";
 
@@ -51,10 +52,19 @@ export function HeroSection() {
             Smart Solutions for Smarter Seas
           </motion.h1>
 
+          <motion.p
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.45, delay: 0.08 }}
+            className="text-balance mt-5 max-w-2xl text-sm leading-relaxed text-white/80 sm:text-base md:text-lg"
+          >
+            {HERO_SUBHEADING}
+          </motion.p>
+
           <motion.div
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.45, delay: 0.1 }}
+            transition={{ duration: 0.45, delay: 0.12 }}
             className="mt-8"
           >
             <ButtonLink

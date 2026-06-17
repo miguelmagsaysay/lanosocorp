@@ -1,25 +1,26 @@
 import Image from "next/image";
 import { Award, Globe2, Wrench } from "lucide-react";
 import { SectionHeader } from "@/components/ui/section-header";
+import { REGULATORY_DISCLAIMER } from "@/lib/constants";
 import { MotionSection } from "./motion-section";
 
 const pillars = [
   {
-    title: "IMO, SOLAS & MARINA Aligned",
+    title: "Aligned with IMO, SOLAS & MARINA Requirements",
     body: "Documentation, testing, and integration workflows built for class, PSC, and owner technical review.",
     icon: Award,
     imageSrc: "/images/hero-ship.jpg",
     imageAlt: "Commercial vessel at sea — representative of class, SOLAS, and MARINA compliance.",
   },
   {
-    title: "Field-Proven",
+    title: "Field-Proven Experience",
     body: "Over a decade mobilizing on commercial and offshore vessels across the Philippines.",
     icon: Wrench,
     imageSrc: "/images/technical-work.jpg",
     imageAlt: "Marine technicians performing systems work aboard a vessel.",
   },
   {
-    title: "Nationwide Reach",
+    title: "Nationwide Project Support",
     body: "Metro Manila head office with teams across Visayas, Mindanao, and key port hubs.",
     icon: Globe2,
     imageSrc: "/images/engine-room.jpg",
@@ -34,7 +35,7 @@ export function TrustSection() {
         <MotionSection>
           <SectionHeader
             eyebrow="Authority"
-            title="Built on Compliance. Trusted by the Industry."
+            title="Built on Compliance. Proven in the Field"
             description="Consistency, traceability, and technical depth — the signals owners and operators expect from a systems integrator."
           />
         </MotionSection>
@@ -74,6 +75,11 @@ export function TrustSection() {
             );
           })}
         </div>
+
+        <p className="mt-10 max-w-4xl text-xs leading-relaxed text-navy/50">
+          <span className="font-medium text-navy/60">Disclaimer:</span>{" "}
+          {REGULATORY_DISCLAIMER}
+        </p>
       </div>
     </section>
   );
