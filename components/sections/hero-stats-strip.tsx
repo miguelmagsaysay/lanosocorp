@@ -28,11 +28,9 @@ function useAnimatedNumber(target: number, active: boolean, duration = 1600) {
 function CloudPill({
   stat,
   active,
-  className,
 }: {
   stat: HomeStat;
   active: boolean;
-  className?: string;
 }) {
   const count = useAnimatedNumber(
     stat.value ?? 0,
@@ -42,8 +40,7 @@ function CloudPill({
   return (
     <div
       className={cn(
-        "flex min-w-[8.5rem] flex-col items-center justify-center rounded-2xl border border-white/15 bg-white/10 px-5 py-4 text-center backdrop-blur-md transition hover:border-white/25 hover:bg-white/15 sm:min-w-[9.5rem] sm:px-6 sm:py-5",
-        className,
+        "flex h-[7rem] w-[10.5rem] shrink-0 flex-col items-center justify-center rounded-2xl border border-white/15 bg-white/10 px-4 py-4 text-center backdrop-blur-md transition hover:border-white/25 hover:bg-white/15 sm:h-[7.5rem] sm:w-[11rem] sm:px-5",
       )}
     >
       {stat.variant === "metric" ? (
@@ -53,16 +50,29 @@ function CloudPill({
             {count}
             {stat.suffix}
           </p>
-          <p className="mt-1 text-xs font-normal text-white/55">{stat.label}</p>
+          <p className="mt-1 text-[11px] font-normal leading-snug text-white/55 sm:text-xs">
+            {stat.label}
+          </p>
         </>
       ) : null}
 
       {stat.variant === "text" ? (
         <>
-          <p className="text-lg font-light tracking-tight text-white sm:text-xl">
+          <p
+            className={cn(
+              "font-light tracking-tight text-white",
+              stat.id === "compliance"
+                ? "w-full text-[10px] leading-tight sm:text-[11px]"
+                : "text-base sm:text-lg",
+            )}
+          >
             {stat.display}
           </p>
-          <p className="mt-1 text-xs font-normal text-white/55">{stat.label}</p>
+          {stat.label ? (
+            <p className="mt-1 text-[11px] font-normal leading-snug text-white/55 sm:text-xs">
+              {stat.label}
+            </p>
+          ) : null}
         </>
       ) : null}
 

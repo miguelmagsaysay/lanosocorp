@@ -24,16 +24,18 @@ export const HOME_STATS: HomeStat[] = [
     value: 200,
     suffix: "+",
   },
-  {
-    id: "compliance",
-    variant: "badges",
-    label: "Compliance",
-    badges: ["IMO", "SOLAS", "MARINA"],
-  },
+
   {
     id: "operations",
     variant: "text",
     label: "Operations",
     display: "8 Regional Hubs",
+  },
+  {
+    id: "compliance",
+    variant: "text",
+    label: "",
+    display:
+      "Marine Solutions Aligned with IMO, SOLAS and MARINA Regulatory Requirements",
   },
 ];

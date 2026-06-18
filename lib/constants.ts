@@ -10,9 +10,6 @@ import type { BrandItem, MarqueeBrand, NavLink, ServiceItem } from "@/types";
 
 export const SITE_URL = "https://lanosocorp.com";
 
-export const HERO_SUBHEADING =
-  "Marine Solutions Aligned with IMO, SOLAS and MARINA Regulatory Requirements";
-
 export const HERO_CAROUSEL_SLIDES = [
   
   {
